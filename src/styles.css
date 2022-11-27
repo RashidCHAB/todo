@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: midnightblue;
+
+}
+
+.body {
+    background-image: url(./images/2.jpg);
+    background-size: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftimg {
+    width: 120px;
+    height: 280px;
+}
+
+.rigthimg {
+    width: 120px;
+    height: 280px;
+}
+
+.main {
+    text-align: center;
+    width: 375px;
+}
+
+.head {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.form {
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 375px;
+
+}
+
+.input {
+    margin-right: 5px;
+    outline: none;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    width: 216px;
+}
+
+.input:focus {}
+
+.accbtn {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.list {
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.task {
+    padding-right: 3px;
+    display: flex;
+
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    margin-bottom: 2px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+
+}
+
+.delbtn {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    cursor: pointer;
+}
+
+
+.txt {
+    padding-left: 5px;
+    width: 95%;
+}
+
+.redtxt {
+    color: red;
+    padding-left: 5px;
+    width: 95%;
+}
+
+.red,
+.white,
+.dltimg {
+
+    display: flex;
+    align-items: center;
+    width: 15px;
+    background: none;
+}
+    
+
+.prio {
+    cursor: pointer;
+
+    background: none;
+    border: 0px solid black;
+}
+
+.prio:active {
+    border-radius: 50px;
+    background-color: rgb(212, 192, 165);
+}
+
+.dltbtn {
+    cursor: pointer;
+
+    background: none;
+    border: 0px solid black;
+}
+
+.dltbtn:active {
+    border-radius: 5px;
+    background-color: rgb(249, 216, 237);
+}
