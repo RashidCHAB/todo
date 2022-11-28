@@ -1,21 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
-import List from './List';
-import tasks from './tasks';
 
 
-const Form = () => {
-    const [text, setText] = useState("")
-    const [array, setArray] = useState(tasks)
+const Form = (props) => {
+    const [array, setArray] = useState()
 
-    const adder = (e) => {
-        e.preventDefault()
-        // ТУТ ДОЛЖНО БЫТЬ ДОБАВЛЕНИЕ
-    }
+    
     return (
-        <div className='form' onSubmit={adder}>
+        <div className='form' onSubmit={props.adder}>
             <form>
-                <input type="text" placeholder='Текст задания' className='input' value={text} onChange={(e) => setText(e.target.value)}/>
+                <input type="text" placeholder='Текст задания' className='input' value={props.text} onChange={(e) => props.setText(e.target.value)}/>
                 <button type="submit" className='accbtn'>ПОДТВЕРДИТЬ</button>
             </form>
 
