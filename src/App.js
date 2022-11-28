@@ -7,17 +7,18 @@ import Form from "./components/Form";
 import List from "./components/List";
 
 function App() {
-  const tasks = [
-    { text: "Задание из массива ", priority: "white" },
-    { text: "Задание из массива 2", priority: "red" },
-    { text: "Задание из массива 3", priority: "white" }
-  ]
+
   const [text, setText] = useState("")
-  const [array, setTasks] = useState(tasks)
+  const [array, setTasks] = useState(
+    [
+      { text: "Задание из массива ", priority: "white" },
+      { text: "Задание из массива 2", priority: "red" },
+      { text: "Задание из массива 3", priority: "white" }
+    ])
   const adder = (e) => {
     e.preventDefault()
 
-    setTasks([{text: text, priority: true}, ...array])
+    setTasks([...array, { text: text, priority: "white" }])
     setText("")
   }
   return (
@@ -26,7 +27,7 @@ function App() {
 
       <div className='main'>
         <Head />
-        <Form adder={adder} text={text} setText={setText}/>
+        <Form adder={adder} text={text} setText={setText} />
         {array.map((task => <List text={task.text} priority={task.priority} />))}
       </div>
 
